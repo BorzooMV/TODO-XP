@@ -1,9 +1,10 @@
+@import "./colors";
+@import "./fonts";
+@import "./Header";
+@import "./Footer";
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
 }

@@ -1,0 +1,31 @@
+//Poppins font; Thin100 ThinI100 Regular400 RegularI400 Bold700 added
+//font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+//headings
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.9rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
