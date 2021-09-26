@@ -1,10 +1,22 @@
 @import "./colors";
 @import "./fonts";
 @import "./Header";
+@import "./Main";
+@import "./Profile";
 @import "./Footer";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background-color: $White;
+  width: 390px;
+  height: 844px;
 }

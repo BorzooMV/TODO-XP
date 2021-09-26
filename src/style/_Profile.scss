@@ -1,0 +1,58 @@
+.Profile {
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  hr {
+    margin-bottom: 30px;
+  }
+
+  .profileContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .profilePicture {
+      width: 140px;
+      height: 140px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .information {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      .profileName {
+        font-size: 1.8rem;
+        font-weight: 300;
+      }
+
+      .rank {
+        font-size: 1.6rem;
+        font-weight: 100;
+      }
+
+      .hr-s {
+        margin: 10px 0;
+      }
+
+      .states {
+        .state {
+          display: flex;
+          justify-content: space-between;
+
+          .key,
+          .value {
+            font-size: 1.5rem;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+  }
+}
