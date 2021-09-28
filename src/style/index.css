@@ -27,24 +27,24 @@ h4 {
 }
 
 .hr-l {
-  border: 3px solid #3f3f3f;
+  border: 2px solid #3f3f3f;
   background-color: #3f3f3f;
-  border-radius: 0.5px;
+  border-radius: 2px;
 }
 
 .hr-m {
-  border: 2px solid #3f3f3f;
+  border: 1.5px solid #3f3f3f;
   background-color: #3f3f3f;
-  border-radius: 0.5px;
+  border-radius: 2px;
 }
 
 .hr-s {
   border: 1px solid #3f3f3f;
   background-color: #3f3f3f;
-  border-radius: 0.5px;
 }
 
 .Header {
+  z-index: 2;
   position: fixed;
   background-color: #3f8087;
   display: flex;
@@ -62,16 +62,42 @@ h4 {
   color: #dbe4ee;
   text-decoration: none;
 }
-.Header nav a {
+.Header nav button {
   color: #dbe4ee;
   text-decoration: none;
   font-size: 2rem;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .Main {
+  z-index: 0;
   position: relative;
   top: 100px;
   padding: 16px 35px;
+  padding-bottom: 150px;
+}
+
+.Divider {
+  margin: 10px 0;
+}
+
+.Divider-Center {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.DividerToday {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DividerToday span {
+  font-size: 1.7rem;
+  font-weight: 300;
 }
 
 .Profile h2 {
@@ -105,7 +131,7 @@ h4 {
 }
 .Profile .profileContainer .information .rank {
   font-size: 1.6rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 .Profile .profileContainer .information .hr-s {
   margin: 10px 0;
@@ -117,10 +143,116 @@ h4 {
 .Profile .profileContainer .information .states .state .key,
 .Profile .profileContainer .information .states .state .value {
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 300;
+}
+
+.TaskList {
+  margin: 20px 0px;
+}
+
+.Task {
+  width: 100%;
+  background-color: #c9ceb2;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+  transition: all 200ms ease;
+}
+.Task div {
+  position: relative;
+  display: inline-flex;
+  width: 60px;
+  justify-content: space-between;
+}
+.Task div span {
+  font-size: 2rem;
+}
+.Task div .task-done {
+  color: green;
+}
+.Task div .task-delete {
+  color: red;
+}
+
+.TaskExpand {
+  opacity: 0;
+  position: relative;
+  top: -10px;
+  left: 1.5%;
+  width: 97%;
+  height: 0;
+  background-color: #b0b6a7;
+  border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+  transition: all 100ms ease;
+}
+.TaskExpand p {
+  font-size: 1.3rem;
+}
+
+.active {
+  display: block;
+  padding: 10px 15px;
+  height: auto;
+  opacity: 1;
+}
+
+.ArchiveTask {
+  width: 100%;
+  background-color: #c9ceb2;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+}
+.ArchiveTask div {
+  position: relative;
+  display: inline-flex;
+  width: 30px;
+  justify-content: space-between;
+}
+.ArchiveTask div span {
+  font-size: 2rem;
+}
+.ArchiveTask div .task-delete {
+  color: red;
+}
+
+.About {
+  position: relative;
+  margin: 20px 0px;
+  text-align: center;
+}
+.About p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.About .socials {
+  position: relative;
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  margin: 20px auto;
+}
+.About .socials i {
+  font-size: 2rem;
+}
+.About .email {
+  font-size: 1.5rem;
 }
 
 .Footer {
+  z-index: 10;
   position: fixed;
   background-color: #3f8087;
   bottom: 0;
@@ -130,6 +262,7 @@ h4 {
   justify-content: center;
   align-items: center;
   box-shadow: 0 -2px 5px rgba(128, 128, 128, 0.5);
+  z-index: 100;
 }
 .Footer button {
   padding: 10px 20px;
@@ -147,13 +280,13 @@ h4 {
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
+  position: relative;
   background-color: #dbe4ee;
   width: 390px;
-  height: 844px;
 }
 
 /*# sourceMappingURL=index.css.map */

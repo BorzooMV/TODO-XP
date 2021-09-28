@@ -1,5 +1,14 @@
 import React from "react";
 
+const clickHandler = () => {
+    const about = document.getElementById("aboutSection");
+    window.scrollTo({
+        top:about.offsetTop - 200,
+        left:0,
+        behavior:'smooth'
+    })
+}
+
 const Header = () => {
     return(
         <header className="Header">
@@ -7,7 +16,7 @@ const Header = () => {
                 <h1><a href="/">TodoList</a></h1>
             </div>
             <nav>
-                <a href="#">About</a>
+                <button type="button" onClick={clickHandler}>About</button>
             </nav>
         </header>
     )

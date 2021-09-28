@@ -1,0 +1,27 @@
+.ArchiveTask {
+  width: 100%;
+  background-color: $Secondary;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+
+  div {
+    position: relative;
+    display: inline-flex;
+    width: 30px;
+    justify-content: space-between;
+
+    span {
+      font-size: 2rem;
+    }
+
+    .task-delete {
+      color: red;
+    }
+  }
+}

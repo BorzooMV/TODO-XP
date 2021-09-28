@@ -1,10 +1,10 @@
 import React from "react";
-import profileImg from '../../../assets/IMG_5925.JPG'
+import profileImg from '../../assets/IMG_5925.JPG';
 
 const Profile = () => {
     return(
         <>
-            <section className="Profile">
+            <section id="profile" className="Profile">
                 <h2>Your Information</h2>
                 <hr className="hr-l" />
                 <div className="profileContainer">

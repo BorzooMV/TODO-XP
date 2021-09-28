@@ -1,0 +1,58 @@
+.Task {
+  width: 100%;
+  background-color: $Secondary;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+  transition: all 200ms ease;
+
+  div {
+    position: relative;
+    display: inline-flex;
+    width: 60px;
+    justify-content: space-between;
+
+    span {
+      font-size: 2rem;
+    }
+
+    .task-done {
+      color: green;
+    }
+
+    .task-delete {
+      color: red;
+    }
+  }
+}
+
+.TaskExpand {
+  // display: none;
+  opacity: 0;
+  position: relative;
+  top: -10px;
+  left: 1.5%;
+  width: 97%;
+  height: 0;
+  background-color: rgb(176, 182, 167);
+  border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+  transition: all 100ms ease;
+
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+.active {
+  display: block;
+  padding: 10px 15px;
+  height: auto;
+  opacity: 1;
+}
