@@ -1,5 +1,6 @@
 import React from "react";
-import profileImg from '../../assets/IMG_5925.JPG';
+import users from "../../assets/users";
+import dateConvertor from "../../modules/dateCovertor";
 
 const Profile = () => {
     return(
@@ -9,19 +10,19 @@ const Profile = () => {
                 <hr className="hr-l" />
                 <div className="profileContainer">
                     <div className="profilePicture">
-                        <img src={profileImg} alt="Borzoo Moazami" />
+                        <img src={users[1]["image"]} alt={users[1]["username"]} />
                     </div>
                     <div className="information">
-                        <span className="profileName">Borzoo Moazami</span>
-                        <span className="rank">Advance</span>
+                        <span className="profileName">{users[1]["username"]}</span>
+                        <span className="rank">{users[1]["rank"]}</span>
                         <hr className="hr-s" />
                         <div className="states">
                             <div className="state">
-                                <span className="value">90</span>
+                                <span className="value">{users[1]["point"]}</span>
                                 <span className="key">Points</span>
                             </div>
                             <div className="state">
-                                <span className="value">20</span>
+                                <span className="value">{dateConvertor(users[1]['date-joined'])}</span>
                                 <span className="key">Days joined</span>
                             </div>
                         </div>

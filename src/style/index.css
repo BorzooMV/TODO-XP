@@ -110,9 +110,13 @@ h4 {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
 }
 .Profile .profileContainer .profilePicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 140px;
   height: 140px;
 }
@@ -124,6 +128,7 @@ h4 {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 150px;
 }
 .Profile .profileContainer .information .profileName {
   font-size: 1.8rem;
