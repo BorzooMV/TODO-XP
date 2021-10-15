@@ -1,10 +1,14 @@
 import React from "react";
 import ArchiveTask from "./ArchiveTask";
 
-const ArchiveList = () => {
+const ArchiveList = (props) => {
     return(
         <ul className="TaskList">
-            <ArchiveTask />
+           {
+               props.tasks.map(task => {
+                   return <ArchiveTask title={task.title} key={task.id} />
+               })
+           }
         </ul>
     )
 }

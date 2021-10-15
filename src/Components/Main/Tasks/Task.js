@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import React from "react";
 import TaskExpand from './TaskExpand';
 
 const Task = (props) => {
@@ -10,7 +10,7 @@ const Task = (props) => {
         <div className="Task" onClick={(e)=>divClickHandler(e)}>
             <h3>{props.title?props.title:"Task"}</h3>
             <div>
-                <span><i className="far fa-check-square task-done"></i></span>
+                <button type="button" onClick={(e)=>props.doneBtnHandler(e)} taskindex={props.id - 1}><i className="far fa-check-square task-done"></i></button>
                 <span><i className="far fa-trash-alt task-delete"></i></span>
             </div>
         </div>

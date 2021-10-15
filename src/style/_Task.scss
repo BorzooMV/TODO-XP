@@ -21,6 +21,14 @@
       font-size: 2rem;
     }
 
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
     .task-done {
       color: green;
     }

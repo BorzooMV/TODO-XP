@@ -12,9 +12,25 @@ const data =[
         "image":userPic,
         "tasks":[
             {
-                "task-title":"Test",
+                "id":1,
+                "title":"Task1",
                 "date":"09/28/2021",
-                "priority":"High"
+                "priority":"low",
+                "note":"This is just a test"
+            },
+            {
+                "id":2,
+                "title":"Task2",
+                "date":"09/28/2021",
+                "priority":"medium",
+                "note":"This is just a test"
+            },
+            {
+                "id":3,
+                "title":"Task3",
+                "date":"09/28/2021",
+                "priority":"high",
+                "note":"This is just a test"
             }
         ]
     },

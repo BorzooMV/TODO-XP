@@ -177,6 +177,13 @@ h4 {
 .Task div span {
   font-size: 2rem;
 }
+.Task div button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
 .Task div .task-done {
   color: green;
 }

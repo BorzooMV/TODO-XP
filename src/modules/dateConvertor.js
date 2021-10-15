@@ -2,8 +2,6 @@
 //then give how long has passed 
 //from that date.
 
-import data from "../assets/users"
-
 const dateConvertor = (date) => {
     const date1 = new Date(date);
     const date2 = new Date();
