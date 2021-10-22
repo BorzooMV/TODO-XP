@@ -10,7 +10,7 @@ const Task = (props) => {
         <div className="Task" onClick={(e)=>divClickHandler(e)}>
             <h3>{props.title?props.title:"Task"}</h3>
             <div>
-                <button type="button" onClick={(e)=>props.doneBtnHandler(e)} taskindex={props.id - 1}><i className="far fa-check-square task-done"></i></button>
+                <button type="button" onClick={(e)=>props.doneBtnHandler(e)} taskid={props.id}><i className="far fa-check-square task-done"></i></button>
                 <span><i className="far fa-trash-alt task-delete"></i></span>
             </div>
         </div>

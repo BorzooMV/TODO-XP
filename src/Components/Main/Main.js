@@ -10,12 +10,24 @@ import users from '../../assets/users';
 const Main = () => {
     const [tasks,setTasks] = useState(users[0]["tasks"]);
     const [archiveTasks,setArchiveTasks] = useState([]);
+
+    const removeTask = (index) => {
+        const temp = [...tasks]
+        temp.splice(index,1);
+        setTasks(temp);
+    }
+
     const doneBtnHandler = (e) => {
         e.stopPropagation();
-        const i = e.target.parentNode.getAttribute("taskindex");
-        const newArchive = [...archiveTasks];
-        newArchive.push(users[0]["tasks"][i]);
-        setArchiveTasks(newArchive);
+        const temp = [...tasks];
+        const btn = e.target.parentNode;
+        const id = btn.getAttribute("taskid"); 
+        const newTaskArchive = [...archiveTasks];
+        const ourDesireTask = temp.find((task) => task.id == id);
+        newTaskArchive.push(ourDesireTask);
+        const ourDesireIndex = temp.findIndex(task => task.id == id);
+        setArchiveTasks(newTaskArchive);
+        removeTask(ourDesireIndex);
     }
 
     return(
