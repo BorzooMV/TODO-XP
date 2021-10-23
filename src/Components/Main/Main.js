@@ -68,8 +68,13 @@ const Main = () => {
             <CreateTask createTaskHandler={createTaskHandler} />
             <DividerToday title="Today" date="Fri 24/09/2021" />
             <TaskList tasks={tasks} doneBtnHandler={doneBtnHandler} removeBtnHandler={removeBtnHandler} />
-            <Divider title="Task Archive" />
-            <ArchiveList tasks={archiveTasks} />
+            {
+                (archiveTasks.length > 0) && 
+                <>
+                <Divider title="Task Archive" />
+                <ArchiveList tasks={archiveTasks} />
+                </>
+            }
             <Divider id="aboutSection" title="About" align="center" />
             <About />
         </main>
