@@ -11,7 +11,7 @@ const Task = (props) => {
             <h3>{props.title?props.title:"Task"}</h3>
             <div>
                 <button type="button" onClick={(e)=>props.doneBtnHandler(e)} taskid={props.id}><i className="far fa-check-square task-done"></i></button>
-                <span><i className="far fa-trash-alt task-delete"></i></span>
+                <button type="button" onClick={(e) => props.removeBtnHandler(e)} taskid={props.id}><i className="far fa-trash-alt task-delete"></i></button>
             </div>
         </div>
         <TaskExpand />

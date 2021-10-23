@@ -30,11 +30,20 @@ const Main = () => {
         removeTask(ourDesireIndex);
     }
 
+    const removeBtnHandler = (e) => {
+        e.stopPropagation();
+        const btn = e.target.parentNode;
+        const id = btn.getAttribute("taskid");
+        const temp  =[...tasks];
+        const ourDesireIndex = temp.findIndex(task => task.id == id);
+        removeTask(ourDesireIndex);
+    }
+
     return(
         <main className="Main">
             <Profile />
             <DividerToday title="Today" date="Fri 24/09/2021" />
-            <TaskList tasks={tasks} doneBtnHandler={doneBtnHandler} />
+            <TaskList tasks={tasks} doneBtnHandler={doneBtnHandler} removeBtnHandler={removeBtnHandler} />
             <Divider title="Task Archive" />
             <ArchiveList tasks={archiveTasks} />
             <Divider id="aboutSection" title="About" align="center" />

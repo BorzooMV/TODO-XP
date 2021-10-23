@@ -6,7 +6,7 @@ const TaskList = (props) => {
         <div className="TaskList">
             {
                 props.tasks.map(task => {
-                    return <Task key={task.id} id={task.id} title={task.title} doneBtnHandler={props.doneBtnHandler} />
+                    return <Task key={task.id} id={task.id} title={task.title} doneBtnHandler={props.doneBtnHandler} removeBtnHandler={props.removeBtnHandler} />
                 })
             }
         </div>
