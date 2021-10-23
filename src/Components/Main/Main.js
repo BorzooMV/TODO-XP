@@ -5,6 +5,7 @@ import Divider from "./Divider/Divider";
 import TaskList from "./Tasks/TaskList";
 import ArchiveList from "./TaskArchive/ArchiveList";
 import About from './About';
+import CreateTask from "./CreateTask";
 import users from '../../assets/users';
 
 const Main = () => {
@@ -39,9 +40,32 @@ const Main = () => {
         removeTask(ourDesireIndex);
     }
 
+    const createTaskHandler = () => {
+        const input = document.getElementById("createTaskInput");
+        if(input.value){
+            //save the result in tasks
+            const temp = [...tasks];
+            const date = new Date();
+            const newTask = {
+                "id":tasks.length+1,
+                "title":input.value,
+                "date":date,
+                "priority":"low",
+                "note":"This is just a test"
+            }
+            temp.push(newTask);
+            setTasks(temp);
+            input.value="";
+        }else{
+            input.focus({preventScroll:false});
+        }
+    }
+
     return(
         <main className="Main">
             <Profile />
+            <Divider title="Create Task" />
+            <CreateTask createTaskHandler={createTaskHandler} />
             <DividerToday title="Today" date="Fri 24/09/2021" />
             <TaskList tasks={tasks} doneBtnHandler={doneBtnHandler} removeBtnHandler={removeBtnHandler} />
             <Divider title="Task Archive" />
