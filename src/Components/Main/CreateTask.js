@@ -5,7 +5,7 @@ const CreateTask = (props) => {
         <div className="CreateTask">
             <div className="createTaskField">
                 <input type="text" name="taskName" id="createTaskInput" />
-                <button type="button" onClick={props.createTaskHandler}><i class="fas fa-plus"></i></button>
+                <button type="button" onClick={props.createTaskHandler}><i className="fas fa-plus"></i></button>
             </div>
         </div>
     )

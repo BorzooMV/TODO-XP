@@ -18,6 +18,12 @@ const Main = () => {
         setTasks(temp);
     }
 
+    const removeTaskArchive = (index) => {
+        const temp = [...archiveTasks]
+        temp.splice(index,1);
+        setArchiveTasks(temp);
+    }
+
     const doneBtnHandler = (e) => {
         e.stopPropagation();
         const temp = [...tasks];
@@ -38,6 +44,13 @@ const Main = () => {
         const temp  =[...tasks];
         const ourDesireIndex = temp.findIndex(task => task.id == id);
         removeTask(ourDesireIndex);
+    }
+    const removeBtnHandlerArchive = (e) => {
+        e.stopPropagation();
+        const temp  =[...archiveTasks];
+        const element = e.target.parentNode.parentNode.parentNode;
+        const ourDesireIndex = temp.findIndex(task => task.id == element.getAttribute('id'));
+        removeTaskArchive(ourDesireIndex);
     }
 
     const createTaskHandler = () => {
@@ -72,7 +85,7 @@ const Main = () => {
                 (archiveTasks.length > 0) && 
                 <>
                 <Divider title="Task Archive" />
-                <ArchiveList tasks={archiveTasks} />
+                <ArchiveList tasks={archiveTasks} removeBtnHandlerArchive={removeBtnHandlerArchive} />
                 </>
             }
             <Divider id="aboutSection" title="About" align="center" />

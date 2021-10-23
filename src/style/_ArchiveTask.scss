@@ -16,8 +16,12 @@
     width: 30px;
     justify-content: space-between;
 
-    span {
+    button {
+      background: none;
+      border: none;
+      outline: none;
       font-size: 2rem;
+      cursor: pointer;
     }
 
     .task-delete {

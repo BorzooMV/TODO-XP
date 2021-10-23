@@ -7,7 +7,7 @@ const Task = (props) => {
         expandContent.classList.toggle('active');
     }
     return <>
-        <div className="Task" onClick={(e)=>divClickHandler(e)}>
+        <div className="Task" onClick={(e)=>divClickHandler(e)} id={props.id}>
             <h3>{props.title?props.title:"Task"}</h3>
             <div>
                 <button type="button" onClick={(e)=>props.doneBtnHandler(e)} taskid={props.id}><i className="far fa-check-square task-done"></i></button>

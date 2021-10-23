@@ -6,7 +6,7 @@ const ArchiveList = (props) => {
         <ul className="TaskList">
            {
                props.tasks.map(task => {
-                   return <ArchiveTask title={task.title} key={task.id} />
+                   return <ArchiveTask title={task.title} key={task.id} id={task.id} removeBtnHandlerArchive={props.removeBtnHandlerArchive} />
                })
            }
         </ul>
